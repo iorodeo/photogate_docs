@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Photogate shield for Arduino &mdash; Open source physics photogate kit</title>
+    
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="Open source physics photogate kit" href="index.html" />
+    <link rel="up" title="Table of Contents" href="toc.html" />
+    <link rel="next" title="Photogate software" href="photogate_software.html" />
+    <link rel="prev" title="Making a photogate" href="photogate_assembly.html" /> 
+  </head>
+  <body>
+      <div class="header"><a href="http://www.iorodeo.com"  target="_blank">
+  <img class="rightlogo" src="_static/logo.png" alt="Logo"/>
+  </a><h1 class="heading"><a href="index.html">
+  <span>Open source physics photogate kit</span></a></h1>
+<h2 class="heading"><span>Photogate shield for Arduino</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="photogate_assembly.html">Making a photogate</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_software.html">Photogate software</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="photogate-shield-for-arduino">
+<h1>Photogate shield for Arduino<a class="headerlink" href="#photogate-shield-for-arduino" title="Permalink to this headline">¶</a></h1>
+<p>KiCad design files and Gerber files for the PCB can be downloaded from the project page at <a class="reference external" href="https://bitbucket.org/iorodeo/photogate_shield">https://bitbucket.org/iorodeo/photogate_shield</a>.</p>
+<div class="figure align-center">
+<img alt="_images/schematic.png" src="_images/schematic.png" />
+</div>
+<div class="section" id="shield-images">
+<h2>Shield Images<a class="headerlink" href="#shield-images" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="_images/shield_collage.png" src="_images/shield_collage.png" />
+</div>
+</div>
+<div class="section" id="shield-bom">
+<h2>Shield BOM<a class="headerlink" href="#shield-bom" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="5%" />
+<col width="45%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Ref</th>
+<th class="head">Qty</th>
+<th class="head">Description</th>
+<th class="head">Vendor</th>
+<th class="head">Part #</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>1</td>
+<td>Photogate shield board v1.1</td>
+<td>IO Rodeo</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>D1,2</td>
+<td>2</td>
+<td>Red LED</td>
+<td>Jameco</td>
+<td>202471</td>
+</tr>
+<tr class="row-even"><td>P1,2</td>
+<td>2</td>
+<td>RJ11 jack</td>
+<td>Digikey</td>
+<td>A31406-ND</td>
+</tr>
+<tr class="row-odd"><td>SW1</td>
+<td>1</td>
+<td>Reset button</td>
+<td>Digikey</td>
+<td>P8006S-ND</td>
+</tr>
+<tr class="row-even"><td>R1,2</td>
+<td>2</td>
+<td>220 Ohm resistor, 1/8W</td>
+<td>Digikey</td>
+<td>CF18JT220RCT-ND</td>
+</tr>
+<tr class="row-odd"><td>R3,4,5,6</td>
+<td>4</td>
+<td>5.6 K Ohm resistor, 1/8W</td>
+<td>Digikey</td>
+<td>CF18JT5K60CT-ND</td>
+</tr>
+<tr class="row-even"><td>R7, R8</td>
+<td>2</td>
+<td>150 Ohm resistor, 1/8W</td>
+<td>Digikey</td>
+<td>CF18JT150RCT-ND</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>1</td>
+<td>Breakaway header, 40pos</td>
+<td>Digikey</td>
+<td>A32701-40-ND</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="programming-arduino-with-photogate-firmware">
+<span id="firmware-label"></span><h2>Programming Arduino with photogate firmware<a class="headerlink" href="#programming-arduino-with-photogate-firmware" title="Permalink to this headline">¶</a></h2>
+<p><strong>Note: If you received a pre-programmed Arduino with your photogate kit you can skip this section.</strong></p>
+<p>To build the photogate firmware you will also need the Arduino Streaming library <a class="footnote-reference" href="#f1" id="id1">[1]</a>.</p>
+<ul class="simple">
+<li>Download the Arduino photogate firmware from <a class="reference external" href="https://bitbucket.org/iorodeo/photogate_software/get/default.zip">https://bitbucket.org/iorodeo/photogate_software/get/default.zip</a></li>
+<li>Unzip the .zip archive. The firmware is located in the firmware subfolder</li>
+<li>Connect your Arduino board. Launch the Arduino IDE  <a class="footnote-reference" href="#f2" id="id2">[2]</a> and open the main firmware file “firmware.ino”</li>
+<li>Select the Arduino Uno board model</li>
+<li>Select the serial port it is using &#8211; under “Tools” menu of the Arduino IDE</li>
+<li>Upload the photogate firmware to the Arduino board.</li>
+</ul>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Arduino streaming library download: <a class="reference external" href="http://arduiniana.org/libraries/streaming/">http://arduiniana.org/libraries/streaming/</a>. Instructions for installing Arduino libraries can be found here: <a class="reference external" href="http://arduino.cc/en/Guide/Libraries">http://arduino.cc/en/Guide/Libraries</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Arduino IDE installation instructions available at <a class="reference external" href="http://arduino.cc/en/Guide/HomePage">http://arduino.cc/en/Guide/HomePage</a>. More detailed instructions for using the Arduino IDE can be found at <a class="reference external" href="http://arduino.cc/en/Guide/Environment">http://arduino.cc/en/Guide/Environment</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="photogate_assembly.html">Making a photogate</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_software.html">Photogate software</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2014, IO Rodeo.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

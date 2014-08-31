@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Making a photogate &mdash; Open source physics photogate kit</title>
+    
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="Open source physics photogate kit" href="index.html" />
+    <link rel="up" title="Table of Contents" href="toc.html" />
+    <link rel="next" title="Photogate shield for Arduino" href="photogate_shield.html" />
+    <link rel="prev" title="Photogate Hardware List" href="hardware.html" /> 
+  </head>
+  <body>
+      <div class="header"><a href="http://www.iorodeo.com"  target="_blank">
+  <img class="rightlogo" src="_static/logo.png" alt="Logo"/>
+  </a><h1 class="heading"><a href="index.html">
+  <span>Open source physics photogate kit</span></a></h1>
+<h2 class="heading"><span>Making a photogate</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="hardware.html">Photogate Hardware List</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_shield.html">Photogate shield for Arduino</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="making-a-photogate">
+<h1>Making a photogate<a class="headerlink" href="#making-a-photogate" title="Permalink to this headline">¶</a></h1>
+<p>The photogate kit includes two pre-assembled photogates. The photogate assembly steps below are only included for informational purposes and for users intending to make their own DIY photogates.</p>
+<div class="section" id="photogate-rod">
+<h2>1) Photogate rod<a class="headerlink" href="#photogate-rod" title="Permalink to this headline">¶</a></h2>
+<p>Use the 2 x loop clamps and 2 x 10-32 scews to attach the rod as shown in the images. Requires a hex wrench. (Parts # 1, 2 and 3 in <a class="reference internal" href="hardware.html#hardware-label"><em>List of hardware</em></a>).</p>
+<div class="figure align-center">
+<img alt="_images/assembly_2.png" src="_images/assembly_2.png" />
+</div>
+</div>
+<div class="section" id="gravitech-rj11-breakout-board">
+<h2>2) Gravitech RJ11 breakout board<a class="headerlink" href="#gravitech-rj11-breakout-board" title="Permalink to this headline">¶</a></h2>
+<p>Use the four 2-56 screws to mount the RJ11 breakout board to the photogate body. (Parts # 9, 10).</p>
+<div class="figure align-center">
+<img alt="_images/assembly_5.png" src="_images/assembly_5.png" />
+</div>
+</div>
+<div class="section" id="laser-cut-sensor-led-mounts">
+<h2>3) Laser cut sensor/led mounts<a class="headerlink" href="#laser-cut-sensor-led-mounts" title="Permalink to this headline">¶</a></h2>
+<p>Use the 5/16&#8221; long 4-40 screws to attach the sensor/led mounts to the sides of the photogate. Orient the parts with the larger hole towards the top. (Parts # 4, 5).</p>
+<div class="figure align-center">
+<img alt="_images/assembly_6.png" src="_images/assembly_6.png" />
+</div>
+</div>
+<div class="section" id="photogate-sensor-led">
+<h2>4) Photogate sensor/led<a class="headerlink" href="#photogate-sensor-led" title="Permalink to this headline">¶</a></h2>
+<p>Press-fit the LED and Sensor into the mounts. (Part # 8).</p>
+<div class="figure align-center">
+<img alt="_images/assembly_7_8.png" src="_images/assembly_7_8.png" />
+</div>
+</div>
+<div class="section" id="cable-covers">
+<h2>5) Cable covers<a class="headerlink" href="#cable-covers" title="Permalink to this headline">¶</a></h2>
+<p>Use the 1/4&#8221; 4-40 screws to mount three of the cable covers. (Parts # 6, 7).</p>
+<div class="figure align-center">
+<img alt="_images/assembly_9.png" src="_images/assembly_9.png" />
+</div>
+</div>
+<div class="section" id="wiring-to-the-rj11-breakout-board">
+<h2>6) Wiring to the RJ11 breakout board<a class="headerlink" href="#wiring-to-the-rj11-breakout-board" title="Permalink to this headline">¶</a></h2>
+<p>Cut and strip the four wires.</p>
+<div class="figure align-center">
+<img alt="_images/assembly_10.png" src="_images/assembly_10.png" />
+</div>
+<p>Using a small Philips blade screwdriver. insert and secure wires into the RJ11 breakout board as shown in the image below.</p>
+<ul class="simple">
+<li>Phototransistor wires first (white, green) followed by emitter LED wires (black, red).</li>
+</ul>
+<p>Using some of the left-over black wire from the LED component, form a small u-shaped loop and place the ends into the last two terminal blocks. This is for the auto-detect function.</p>
+<div class="figure align-center">
+<img alt="_images/assembly_11.png" src="_images/assembly_11.png" />
+</div>
+</div>
+<div class="section" id="finished-photogate">
+<h2>7) Finished photogate<a class="headerlink" href="#finished-photogate" title="Permalink to this headline">¶</a></h2>
+<p>Screw on the last cable cover to finish assembly.</p>
+<div class="figure align-center">
+<img alt="_images/assembly_13.png" src="_images/assembly_13.png" />
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="hardware.html">Photogate Hardware List</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_shield.html">Photogate shield for Arduino</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2014, IO Rodeo.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

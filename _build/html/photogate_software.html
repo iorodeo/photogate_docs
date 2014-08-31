@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Photogate software &mdash; Open source physics photogate kit</title>
+    
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="Open source physics photogate kit" href="index.html" />
+    <link rel="up" title="Table of Contents" href="toc.html" />
+    <link rel="next" title="Freefall - calculating g" href="photogate_example_1.html" />
+    <link rel="prev" title="Photogate shield for Arduino" href="photogate_shield.html" /> 
+  </head>
+  <body>
+      <div class="header"><a href="http://www.iorodeo.com"  target="_blank">
+  <img class="rightlogo" src="_static/logo.png" alt="Logo"/>
+  </a><h1 class="heading"><a href="index.html">
+  <span>Open source physics photogate kit</span></a></h1>
+<h2 class="heading"><span>Photogate software</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="photogate_shield.html">Photogate shield for Arduino</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_example_1.html">Freefall - calculating <em>g</em></a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="photogate-software">
+<h1>Photogate software<a class="headerlink" href="#photogate-software" title="Permalink to this headline">¶</a></h1>
+<p>Software is currently available for Windows and Linux.</p>
+<ul class="simple">
+<li><strong>Windows</strong> - Download the Windows executable from <a class="reference external" href="https://bitbucket.org/iorodeo/photogate_software/downloads/photogate_v0.1.exe">https://bitbucket.org/iorodeo/photogate_software/downloads/photogate_v0.1.exe</a></li>
+<li><strong>Linux</strong> - Source is available from <a class="reference external" href="https://bitbucket.org/iorodeo/photogate_software/get/default.tar.gz">https://bitbucket.org/iorodeo/photogate_software/get/default.tar.gz</a></li>
+</ul>
+<div class="section" id="software-overview">
+<h2>Software Overview<a class="headerlink" href="#software-overview" title="Permalink to this headline">¶</a></h2>
+<p>As a moving object passes through the photogate, the object briefly interupts the IR LED beam, preventing light from reaching the phototransistor.
+Once the object has completely passed through the photogate, the IR LED beam is no longer interupted and light reaches the phototransistor.</p>
+<p>The photogate software reports the time in seconds when the photogate IR LED beam is interupted i.e. the object entry and exit times.</p>
+<ul class="simple">
+<li>Entry time = time when the photogate is blocked (interupted) by object</li>
+<li>Exit time = time when the photogate is unblocked</li>
+</ul>
+<p>These photogate timing values are used to return two very useful measurements:</p>
+<ol class="arabic simple">
+<li>Time <strong>in gate</strong> - Time for the moving object to completely pass through each photogate, i.e. difference between entry and exit times.</li>
+<li>Time <strong>between gates</strong> - Time for the moving object to pass between gate 1 and 2, i.e. difference between Photogate 1 and 2 entry times.</li>
+</ol>
+<p>An example is shown below:</p>
+<div class="figure align-center">
+<img alt="_images/screenshot_7.png" src="_images/screenshot_7.png" />
+</div>
+<p>These values can be used to calculate the velocity and acceleration of a moving object. For example, experiments to determine acceleration due to gravity, (see <a class="reference internal" href="photogate_example_1.html#lab1-label"><em>Freefall - calculating g</em></a>) or acceleration of an object on an incline (see <a class="reference internal" href="photogate_example.html#lab2-label"><em>Inclined plane - rolling ball</em></a>).</p>
+</div>
+<div class="section" id="additional-software-features">
+<h2>Additional Software Features<a class="headerlink" href="#additional-software-features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Software can be used in both &#8220;One Photogate&#8221; or &#8220;Two Photogate&#8221; mode.</li>
+<li>Photogate auto-detect function automatically selects the correct Operating Mode.</li>
+<li>Data can be saved in 3 different formats. Matlab (.mat), Comma separated values (.csv) and plain ascii text (.txt).</li>
+<li>When used in Two Photogate Mode, Photogate 2 remains inactive until Photogate 1 is activated.</li>
+<li>Timing reset function. Click on the Reset button anytime to clear data and re-start the photogates. Note that any data will not be saved.</li>
+</ul>
+</div>
+<div class="section" id="using-the-photogate-software">
+<span id="software-label"></span><h2>Using the photogate software<a class="headerlink" href="#using-the-photogate-software" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Before starting, make sure the Arduino is programmed with the photogate firmware as described in <a class="reference internal" href="photogate_shield.html#firmware-label"><em>Programming Arduino with photogate firmware</em></a></li>
+<li>Download and launch the photogate software. The screenshots shown here were taken using the photogate software for Windows.</li>
+<li>Connect the Arduino to the PC with the USB cable. In the photogate software screen, select the device port from the drop-down menu. The photogate software automatically detects all available serial ports so you should be able to select from the drop-down list.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/screenshot_4.png" src="_images/screenshot_4.png" />
+</div>
+<div class="section" id="connect-photogates">
+<h3>Connect photogates<a class="headerlink" href="#connect-photogates" title="Permalink to this headline">¶</a></h3>
+<p>Connect the photogates to the Arduino shield. The software auto-detect feature automatically detects the number of photogates connected and selects the operating mode. As shown in the screenshots below, mode should change from &#8220;No photogates&#8221; to &#8220;One photogate&#8221; or &#8220;Two photogates&#8221;
+Additionally, on the Arduino shield a red led will indicate once the photogates are connected.</p>
+<div class="figure align-center">
+<img alt="_images/screenshot_4_5.png" src="_images/screenshot_4_5.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/shield.png" src="_images/shield.png" />
+</div>
+</div>
+<div class="section" id="start-measuring">
+<h3>Start measuring<a class="headerlink" href="#start-measuring" title="Permalink to this headline">¶</a></h3>
+<p>That&#8217;s it ! You are ready to start using the photogates. On the next pages are some examples of using the photogates.</p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="photogate_shield.html">Photogate shield for Arduino</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_example_1.html">Freefall - calculating <em>g</em></a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2014, IO Rodeo.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

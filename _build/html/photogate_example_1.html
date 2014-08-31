@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Freefall - calculating g &mdash; Open source physics photogate kit</title>
+    
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="Open source physics photogate kit" href="index.html" />
+    <link rel="up" title="Table of Contents" href="toc.html" />
+    <link rel="next" title="Inclined plane - rolling ball" href="photogate_example.html" />
+    <link rel="prev" title="Photogate software" href="photogate_software.html" /> 
+  </head>
+  <body>
+      <div class="header"><a href="http://www.iorodeo.com"  target="_blank">
+  <img class="rightlogo" src="_static/logo.png" alt="Logo"/>
+  </a><h1 class="heading"><a href="index.html">
+  <span>Open source physics photogate kit</span></a></h1>
+<h2 class="heading"><span>Freefall - calculating g</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="photogate_software.html">Photogate software</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_example.html">Inclined plane - rolling ball</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="freefall-calculating-g">
+<span id="lab1-label"></span><h1>Freefall - calculating <em>g</em><a class="headerlink" href="#freefall-calculating-g" title="Permalink to this headline">¶</a></h1>
+<p>Equation for calculating acceleration due to gravity is:</p>
+<div class="math">
+\[g = \frac{v \mathrm{2} - v \mathrm{1}}{\mathrm{\Delta t}}\]</div>
+<p>where <span class="math">\(g\)</span> is the acceleration due to gravity, <span class="math">\(v1\)</span> is the velocity in gate 1, <span class="math">\(v2\)</span> is the velocity in gate 2 and
+<span class="math">\(\Delta t\)</span> is the time between gates.</p>
+<div class="section" id="setting-up-the-photogates">
+<h2>1) Setting up the photogates<a class="headerlink" href="#setting-up-the-photogates" title="Permalink to this headline">¶</a></h2>
+<p>On a single support stand <a class="footnote-reference" href="#f1" id="id1">[1]</a>, place the two photogates a distance apart. Make sure that the top (first) photogate is connected to the Photogate 1 position on the Arduino Shield.</p>
+<div class="figure align-center">
+<img alt="_images/photogates_3.png" src="_images/photogates_3.png" />
+</div>
+</div>
+<div class="section" id="software">
+<h2>2) Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<p>Set-up the software as described in the previous section <a class="reference internal" href="photogate_software.html#software-label"><em>Using the photogate software</em></a>.</p>
+</div>
+<div class="section" id="sample-data">
+<h2>3) Sample data<a class="headerlink" href="#sample-data" title="Permalink to this headline">¶</a></h2>
+<p>In the example shown below, we used a 0.5&#8221; wide metal block (12.7mm). Hold the object slightly above the first photogate and release to drop it between the two gates. Save data for analysis.</p>
+<div class="figure align-center">
+<img alt="_images/wbd_drop.png" src="_images/wbd_drop.png" />
+</div>
+</div>
+<div class="section" id="data-analysis">
+<h2>4) Data analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">From time in gates, calculate velocity, <span class="math">\(v\)</span>, of falling object:</p>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math">\(v\)</span> = object length (m) / time in gate (s)</li>
+<li><span class="math">\(v1\)</span>  = 0.0127/0.00940 = 1.351 <span class="math">\(\mathrm{m}/\mathrm{s}\)</span></li>
+<li><span class="math">\(v2\)</span>  = 0.0127/0.00406 = 3.128 <span class="math">\(\mathrm{m}/\mathrm{s}\)</span></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">From equation, <em>g</em> is given by:</p>
+</li>
+</ul>
+<div class="math">
+\[g  \approx  \frac{3.128-1.351}{0.17982} \approx 9.88 \mathrm{m}/\mathrm{s}\]</div>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Additional equipment from Carolina Biologicals. Support Stand $15.50, Part # 707146 and Clamp Holder, $9.90, Part # 707310</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="photogate_software.html">Photogate software</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="photogate_example.html">Inclined plane - rolling ball</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2014, IO Rodeo.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
